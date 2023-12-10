@@ -1,11 +1,13 @@
 public class Gryffindor extends Hogwarts {
 
+    private String pupil;
     private int nobility;
     private int honor;
     private int bravery;
 
-    public Gryffindor(int witchcraft, int transgression, int nobility, int honor, int bravery) {
+    public Gryffindor(String pupil, int witchcraft, int transgression, int nobility, int honor, int bravery) {
         super (witchcraft, transgression);
+        this.pupil = pupil;
         this.nobility = nobility;
         this.honor = honor;
         this.bravery = bravery;
@@ -35,6 +37,6 @@ public class Gryffindor extends Hogwarts {
         this.bravery = bravery;
     }
 
-    a1 = String
+
 
 }
