@@ -1,11 +1,13 @@
 public class Slytherin extends Hogwarts {
+    private String pupil;
     private int trick;
     private int determination;
     private int ingenuity;
     private int ambition;
 
-    public Slytherin(int witchcraft, int transgression, int trick, int determination, int ingenuity, int ambition) {
+    public Slytherin(String pupil, int witchcraft, int transgression, int trick, int determination, int ingenuity, int ambition) {
         super(witchcraft, transgression);
+        this.pupil = pupil;
         this.trick = trick;
         this.determination = determination;
         this.ingenuity = ingenuity;
