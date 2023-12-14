@@ -1,16 +1,13 @@
 public class Ravenclaw extends Hogwarts {
-    private String pupil;
+    //private String pupil;
     private int mind;
     private int wisdom;
-    private int wit;
     private int creativity;
 
-    public Ravenclaw(String pupil, int witchcraft, int transgression, int mind, int wisdom, int wit, int creativity) {
-        super(witchcraft, transgression);
-        this.pupil = pupil;
+    public Ravenclaw(String nameOfFaculty, int witchcraft, int transgression, int mind, int wisdom, int creativity) {
+        super(nameOfFaculty, witchcraft, transgression);
         this.mind = mind;
         this.wisdom = wisdom;
-        this.wit = wit;
         this.creativity = creativity;
     }
 
@@ -30,19 +27,34 @@ public class Ravenclaw extends Hogwarts {
         this.wisdom = wisdom;
     }
 
-    public int getWit() {
-        return wit;
-    }
-
-    public void setWit(int wit) {
-        this.wit = wit;
-    }
-
     public int getCreativity() {
         return creativity;
     }
 
     public void setCreativity(int creativity) {
         this.creativity = creativity;
+    }
+
+    @Override
+    public String toString() {
+        return "Ravenclaw: " + super.toString() +
+                ", mind=" + mind +
+                ", wisdom=" + wisdom +
+                ", creativity=" + creativity;
+    }
+
+    public int sumQuality() {
+        return getCreativity() + getMind() + getWisdom() + getWitchcraft() + getTransgression();
+    }
+
+    public void compare(Ravenclaw other) {
+        int thisQuality = this.sumQuality();
+        int otherQuality = other.sumQuality();
+        if (thisQuality > otherQuality) {
+            System.out.println("Когтевран: " + thisQuality + " сильнее, чем " + otherQuality);
+        } else {
+            System.out.println("Когтевран: " + otherQuality + " сильнее, чем " + thisQuality);
+        }
+
     }
 }

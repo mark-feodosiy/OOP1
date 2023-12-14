@@ -1,13 +1,12 @@
 public class Slytherin extends Hogwarts {
-    private String pupil;
+    //private String pupil;
     private int trick;
     private int determination;
     private int ingenuity;
     private int ambition;
 
-    public Slytherin(String pupil, int witchcraft, int transgression, int trick, int determination, int ingenuity, int ambition) {
-        super(witchcraft, transgression);
-        this.pupil = pupil;
+    public Slytherin(String nameOfFaculty, int witchcraft, int transgression, int trick, int determination, int ingenuity, int ambition) {
+        super(nameOfFaculty, witchcraft, transgression);
         this.trick = trick;
         this.determination = determination;
         this.ingenuity = ingenuity;
@@ -44,5 +43,28 @@ public class Slytherin extends Hogwarts {
 
     public void setAmbition(int ambition) {
         this.ambition = ambition;
+    }
+
+    @Override
+    public String toString() {
+        return "Slytherin: " + super.toString() +
+                "trick=" + trick +
+                ", determination=" + determination +
+                ", ingenuity=" + ingenuity +
+                ", ambition=" + ambition;
+    }
+    public int sumQuality() {
+        return getAmbition() + getDetermination() + getIngenuity() + getTrick() + getTransgression() + getWitchcraft();
+    }
+
+    public void compare(Slytherin other) {
+        int thisQuality = this.sumQuality();
+        int otherQuality = other.sumQuality();
+        if (thisQuality > otherQuality) {
+            System.out.println("Слизерин: " + thisQuality + " сильнее, чем " + otherQuality);
+        } else {
+            System.out.println("Слизерин: " + otherQuality + " сильнее, чем " + thisQuality);
+        }
+
     }
 }

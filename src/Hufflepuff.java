@@ -1,26 +1,16 @@
 public class Hufflepuff extends Hogwarts {
-    private String pupil;
     private int diligence;
     private int loyalty;
     private int honesty;
 
-    public Hufflepuff(String pupil, int witchcraft, int transgression, int diligence, int loyalty, int honesty) {
-        super(witchcraft, transgression);
-        this.pupil = pupil;
+    public Hufflepuff(String nameOfFaculty, int witchcraft, int transgression, int diligence, int loyalty, int honesty) {
+        super(nameOfFaculty, witchcraft, transgression);
         this.diligence = diligence;
         this.loyalty = loyalty;
         this.honesty = honesty;
     }
 
-    public String getPupil() {
-        return pupil;
-    }
-
-    public void setPupil(String pupil) {
-        this.pupil = pupil;
-    }
-
-    public int getDiligence() {
+   public int getDiligence() {
         return diligence;
     }
 
@@ -42,5 +32,25 @@ public class Hufflepuff extends Hogwarts {
 
     public void setHonesty(int honesty) {
         this.honesty = honesty;
+    }
+
+   @Override
+   public String toString() {
+       return "Hufflepuff: " + super.toString() +
+               ", diligence=" + diligence +
+               ", loyalty=" + loyalty +
+               ", honesty=" + honesty;
+   }
+    public int sumQuality () {
+        return getDiligence() + getLoyalty() + getHonesty() + getWitchcraft() + getTransgression();
+    }
+    public void compare (Hufflepuff other) {
+        int thisQuality = this.sumQuality();
+        int otherQuality = other.sumQuality();
+        if (thisQuality > otherQuality) {
+            System.out.println("Пуффендуй: " + thisQuality + " сильнее, чем " + otherQuality);
+        } else {
+            System.out.println("Пуффендуй: " + otherQuality + " сильнее, чем " + thisQuality);
+        }
     }
 }
