@@ -6,8 +6,8 @@ public class Gryffindor extends Hogwarts {
     //private final Pupil [] pupils;
     // Объявили массив учеников
 
-    public Gryffindor(String nameOfFaculty, int witchcraft, int transgression, int nobility, int honor, int bravery) {
-        super(nameOfFaculty, witchcraft, transgression);
+    public Gryffindor(String name, int witchcraft, int transgression, int nobility, int honor, int bravery) {
+        super(name, witchcraft, transgression);
         this.nobility = nobility;
         this.honor = honor;
         this.bravery = bravery;
@@ -50,9 +50,9 @@ public class Gryffindor extends Hogwarts {
         int thisQuality = this.sumQuality();
         int otherQuality = other.sumQuality();
         if (thisQuality > otherQuality) {
-            System.out.println("Гриффендор: " + thisQuality + " сильнее, чем " + otherQuality);
+            System.out.println("Гриффендор: " + getName() + " (" + thisQuality + ") сильнее, чем " + other.getName() + " (" + otherQuality + ")");
         } else {
-                System.out.println("Гриффендор: " + otherQuality + " сильнее, чем " + thisQuality);
+                System.out.println("Гриффендор: " + other.getName() + " (" + otherQuality + ") сильнее, чем " + getName() + " (" + thisQuality + ")") ;
         }
     }
 

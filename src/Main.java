@@ -1,7 +1,7 @@
 public class Main {
     public static void main(String[] args) {
         //Домашка ООП1
-        Gryffindor a1 = new Gryffindor("Гарри Поттер",-1, 100, 100, 100, 100);
+        Gryffindor a1 = new Gryffindor("Гарри Поттер",0, 100, 100, 100, 100);
         Gryffindor a2 = new Gryffindor("Гермиона Грейнджер", 70, 80, 90, 100, 80);
         Gryffindor a3 = new Gryffindor("Рон Уизли", 60, 70, 80, 90, 80);
         Hufflepuff b1 = new Hufflepuff("Захария Смит", 29, 50, 80, 62, 80);
@@ -13,10 +13,11 @@ public class Main {
         Slytherin d1 = new Slytherin("Драко Малфой", 20, 30, 40, 50, 70, 90);
         Slytherin d2 = new Slytherin("Грэхэм Монтегю", 40, 40, 60, 80, 80, 67);
         Slytherin d3 = new Slytherin("Грегори Гойл", 50, 60, 70, 90, 67, 82);
+        System.out.println(a1);
+        a1.compare(d2);
+        a1.compare(a2);
 
 
-
-
-        System.out.println(a1.getWitchcraft());
+        //System.out.println(a1.getWitchcraft());
     }
 }

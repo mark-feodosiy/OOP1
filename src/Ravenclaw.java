@@ -4,8 +4,8 @@ public class Ravenclaw extends Hogwarts {
     private int wisdom;
     private int creativity;
 
-    public Ravenclaw(String nameOfFaculty, int witchcraft, int transgression, int mind, int wisdom, int creativity) {
-        super(nameOfFaculty, witchcraft, transgression);
+    public Ravenclaw(String name, int witchcraft, int transgression, int mind, int wisdom, int creativity) {
+        super(name, witchcraft, transgression);
         this.mind = mind;
         this.wisdom = wisdom;
         this.creativity = creativity;
@@ -51,9 +51,9 @@ public class Ravenclaw extends Hogwarts {
         int thisQuality = this.sumQuality();
         int otherQuality = other.sumQuality();
         if (thisQuality > otherQuality) {
-            System.out.println("Когтевран: " + thisQuality + " сильнее, чем " + otherQuality);
+            System.out.println("Когтевран: " + getName() + thisQuality + " сильнее, чем " + other.getName() + otherQuality);
         } else {
-            System.out.println("Когтевран: " + otherQuality + " сильнее, чем " + thisQuality);
+            System.out.println("Когтевран: " + other.getName() + otherQuality + " сильнее, чем " + getName() + thisQuality);
         }
 
     }

@@ -3,8 +3,8 @@ public class Hufflepuff extends Hogwarts {
     private int loyalty;
     private int honesty;
 
-    public Hufflepuff(String nameOfFaculty, int witchcraft, int transgression, int diligence, int loyalty, int honesty) {
-        super(nameOfFaculty, witchcraft, transgression);
+    public Hufflepuff(String name, int witchcraft, int transgression, int diligence, int loyalty, int honesty) {
+        super(name, witchcraft, transgression);
         this.diligence = diligence;
         this.loyalty = loyalty;
         this.honesty = honesty;
@@ -48,9 +48,9 @@ public class Hufflepuff extends Hogwarts {
         int thisQuality = this.sumQuality();
         int otherQuality = other.sumQuality();
         if (thisQuality > otherQuality) {
-            System.out.println("Пуффендуй: " + thisQuality + " сильнее, чем " + otherQuality);
+            System.out.println("Пуффендуй: " + getName() + thisQuality + " сильнее, чем " + other.getName() + otherQuality);
         } else {
-            System.out.println("Пуффендуй: " + otherQuality + " сильнее, чем " + thisQuality);
+            System.out.println("Пуффендуй: " + other.getName() + otherQuality + " сильнее, чем " + getName() + thisQuality);
         }
     }
 }
